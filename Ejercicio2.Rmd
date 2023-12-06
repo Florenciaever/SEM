@@ -1,0 +1,70 @@
+---
+title: "EJERCICIO2"
+author: "FAG"
+date: "2023-12-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Ejercicio 2
+# 2023-11-29
+
+# Parte 1: 10 puntos. Pesos iguales a cada pregunta.
+
+1.	Elija la opción correcta.
+
+a)	La teoría de la respuesta al ítem es un modelo estadístico de medición que propone que la probabilidad de respuesta a una pregunta depende de varios parámetros estructurales (i.e., están dados a priori y existen en la realidad) como la discriminación, la severidad y el valor latente subyacente.
+
+b)	La teoría de la respuesta al ítem es un modelo estadístico de medición que parte del supuesto de que el valor latente subyacente de quien responde al test es estructural. Es este valor estructural el que determina la probabilidad de respuesta según la dificultad y la severidad asociada a la pregunta.
+
+c)	La teoría de la respuesta al ítem es un modelo teórico de medición que permite estimar la probabilidad de respuesta a cierta pregunta en función de varios parámetros poblacionales.
+
+
+2.	Discuta si la siguiente afirmación es incorrecta o correcta:
+  El parámetro de discriminación será siempre bajo cuando la severidad es alta en situaciones donde interesa medir valores medios del valor latente subyacente.
+  
+3.	Dibuje una curva característica con valores 2 de discriminación y 0 de severidad, otra con valores .1 de discriminación y 3 de severidad, y otra con valores 15 de discriminación y 0 de severidad.
+
+4.	Discuta el siguiente problema de medición que emerge a partir de un caso real:
+El INEGI se propone medir la percepción de la inseguridad. Dados los costos, la decisión que se toma es preguntar a la gente:
+Considerando la situación en su colonia ¿Se siente seguro o inseguro al caminar en la noche?
+De acuerdo al INEGI está pregunta es suficiente para clasificar a la población en inseguros y seguros.
+Considerando los principios de confiabilidad y validez (al igual que los métodos de análisis), ¿Qué tipo de reflexión podría ser al respecto?
+
+5.	Desde el punto de vista estadístico ¿Qué relación existe entre las curvas características de los ítems y la curva de información de cada ítem?
+
+6.	¿Es la suma de las curvas características de los ítems igual a la curva total de información?
+a)	Sí
+b)	No
+c)	No siempre
+
+7.	¿Por qué según la lógica del modelo Rasch el único parámetro de interés para generar un índice es la severidad?
+
+8.	Elija la o las afirmaciones correctas:
+a)	La validez de contenido es equivalente al modelo teórico de un modelo de medición.
+b)	La validez de cara da sustento a la validez de contenido.
+c)	La validez de constructo agrupa parcialmente al resto de los tipos de validez en un modelo de SEM.
+
+
+```{r setup, include=FALSE}
+#Llamar librerias
+library(lavaan)
+library(semPlot)
+
+
+```
+# Parte 2. 10 Puntos
+El CONEVAL le pide los siguientes cálculos con la base de datos 2020 (adjunta al correo):
+Parte 2.1. 3.333 Puntos
+¿Cuál es la confiabilidad de los scores del índice de carencias (seis indicadores) para el año 2020? ic_rezedu ic_asalud ic_segsoc ic_cv ic_sbv ic_ali_nc
+¿Cuál es la confiabilidad de un índice unidimensional que use los siguientes indicadores: ic_asalud ic_segsoc icv_pisos icv_muros icv_techos icv_hac isb_agua isb_dren isb_luz isb_combus ic_ali_nc ic_rezedu
+¿Hay diferencias en los niveles de confiabilidad entre uno y otro índice? ¿Qué implica que los valores sean distintos desde el punto de vista de la teoría de la medición?
+Parte 2.2. 3.333 Puntos
+Haciendo uso de la validez de criterio estime un modelo de SEM que muestre que la suma simple de los seis indicadores produce scores válidos de pobreza. Para la validación utilice las variables: “rururb tamhogesc” como control y “ing_lab” como validador.
+¿Qué significan los resultados de validez de criterio cuando se consideran los valores de confiabilidad?
+Parte 2.3. 3.333 Puntos
+Haciendo uso de la validez de criterio y constructo estime un modelo de SEM que examine la validez del índice de seis carencias. Para la validación utilice las variables: “rururb tamhogesc” como control y “ing_lab” como validador.
+Bajo el mismo modelo, examine la hipótesis de que las carencias de servicios básicos y de calidad de vivienda ic_sbv ic_cv están altamente correlacionadas. Discuta si deberían juntarse o mantenerse por separado. ¿Qué implicaciones tiene en términos de validez?
